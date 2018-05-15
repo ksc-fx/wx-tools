@@ -14,7 +14,9 @@ function strip(num, precision) {
   if (precision === void 0) {
     precision = 12;
   }
-  return +parseFloat(num.toPrecision(precision));
+  return isNaN(+parseFloat(num.toPrecision(precision)))
+    ? "输入异常"
+    : +parseFloat(num.toPrecision(precision));
 }
 /**
  * Return digits length of a number

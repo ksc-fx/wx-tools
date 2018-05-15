@@ -10,6 +10,15 @@ Page({
   onLoad() {
     console.log(np.eval("1+-2"));
   },
+  initData() {
+    this.setData({
+      firstNum: 0,
+      operator: "",
+      showNum: 0,
+      ctrString: "",
+      equal: false
+    });
+  },
   defaultTap(e) {
     console.log("e", e);
     const type = e.currentTarget.dataset.type;
@@ -20,16 +29,16 @@ Page({
     const strLength = currentctrString.length;
     let tapResultValue = "";
     console.log("type", type);
+
+    if (currentShowValue.indexOf("输入异常") > -1) {
+      this.initData();
+      return;
+    }
+
     switch (type) {
       case "ac":
         //点击归零
-        this.setData({
-          firstNum: 0,
-          operator: "",
-          showNum: 0,
-          ctrString: "",
-          equal: false
-        });
+        this.initData();
         break;
       case "+/-":
         //点击正负号
