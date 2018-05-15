@@ -1,6 +1,6 @@
 "use strict";
 
-import mathJS from "./math";
+import math from "./math";
 
 /**
  * @file 解决浮动运算问题，避免小数点后产生多位数和计算精度损失。
@@ -145,7 +145,7 @@ var index = {
   float2Fixed: float2Fixed,
   eval: str => {
     str = str.replace(/\×/g, "*").replace(/\÷/g, "/");
-    return strip(mathJS.eval(str));
+    return strip(math.eval(str));
   }
 };
 

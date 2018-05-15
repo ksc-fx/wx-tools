@@ -7,7 +7,9 @@ Page({
     ctrString: "",
     equal: false
   },
-  onLoad() {},
+  onLoad() {
+    console.log(np.eval("1+-2"));
+  },
   defaultTap(e) {
     console.log("e", e);
     const type = e.currentTarget.dataset.type;
@@ -31,11 +33,26 @@ Page({
         break;
       case "+/-":
         //点击正负号
-        if (currentShowValue.charAt(0) == "-") {
-          tapResultValue = currentShowValue.substr(1);
+
+        if (/(\+|\-|\×|\÷)$/.test(currentctrString.charAt(strLength - 1))) {
+          if (currentShowValue.charAt(0) == "-") {
+            tapResultValue = "0";
+          } else {
+            tapResultValue = "-0";
+          }
         } else {
-          tapResultValue = "-" + currentShowValue;
+          const lastIndex = currentctrString.lastIndexOf(currentShowValue);
+          let resultStr = currentctrString.substr(0, lastIndex);
+          if (currentShowValue.charAt(0) == "-") {
+            tapResultValue = currentShowValue.substr(1);
+          } else {
+            tapResultValue = "-" + currentShowValue;
+          }
+          this.setData({
+            ctrString: resultStr + tapResultValue
+          });
         }
+
         this.setData({
           showNum: tapResultValue
         });
@@ -68,10 +85,17 @@ Page({
         //点击数字
 
         if (/(\+|\-|\×|\÷)$/.test(currentctrString.charAt(strLength - 1))) {
-          this.setData({
-            showNum: value,
-            ctrString: currentctrString + value
-          });
+          if (currentShowValue == "-0") {
+            this.setData({
+              showNum: "-" + value,
+              ctrString: currentctrString + "-" + value
+            });
+          } else {
+            this.setData({
+              showNum: value,
+              ctrString: currentctrString + value
+            });
+          }
         } else {
           if (this.data.equal) {
             this.setData({
@@ -119,7 +143,7 @@ Page({
         if (currentctrString == "") {
           this.setData({
             operator: value,
-            ctrString: "0" + value
+            ctrString: currentShowValue + value
           });
         } else {
           this.setData({
@@ -147,14 +171,15 @@ Page({
 
         break;
       case "equal":
-        //点击运算符号
+        //点击等号
         let str = /(\+|\-|\×|\÷)$/.test(currentctrString.charAt(strLength - 1))
           ? currentctrString.substr(0, strLength - 1)
           : currentctrString;
+        const result = np.eval(str);
         this.setData({
           equal: true,
           ctrString: "",
-          showNum: np.eval(str)
+          showNum: result
         });
         break;
       default:
