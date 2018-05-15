@@ -1,0 +1,99 @@
+.counter-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #000000;
+  view {
+    box-sizing: border-box;
+    color: #fff;
+  }
+  .counter-box__buttons__single-button {
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      width: 130rpx;
+      height: 130rpx;
+      margin: 0;
+      padding: 0;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 130rpx;
+      font-size: 40rpx;
+      color: #fff;
+    }
+  }
+
+  .counter-box__view {
+    width: 100%;
+    height: 150rpx;
+    font-size: 50rpx;
+    text-align: right;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  .counter-box__buttons {
+    width: 100%;
+    height: 100vw;
+    display: flex;
+    flex-direction: row;
+    .counter-box__buttons--number {
+      flex-basis: 75%;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      .counter-box__buttons--number-action-buttons {
+        height: 20vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .counter-box__buttons__single-button {
+          button {
+            background: rgb(204, 204, 204);
+            color: #000000;
+          }
+          .button-active {
+            background: rgb(226, 225, 225);
+          }
+        }
+      }
+      .counter-box__buttons--number-buttons {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        .counter-box__buttons__single-button {
+          button {
+            background: rgb(61, 59, 59);
+          }
+          .button-active {
+            background: rgb(87, 86, 86);
+          }
+        }
+      }
+    }
+    .counter-box__buttons--symbol {
+      flex-basis: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      .counter-box__buttons__single-button {
+        button {
+          line-height: 120rpx;
+          font-size: 60rpx;
+          background: rgb(255, 165, 0);
+        }
+        .button-active {
+          background: rgb(245, 206, 135);
+        }
+      }
+    }
+  }
+}

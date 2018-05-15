@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "flex-box": "../../common/component/flexBox/index"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "计算器"
+}

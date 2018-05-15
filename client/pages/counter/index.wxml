@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="counter-box">
+        <text class="counter-box__view">
+                {{showNum}}
+        </text>
+      
+        <text class="counter-box__view">
+                {{ctrString}}
+        </text>
+        
+        <view class="counter-box__buttons">
+            <view class="counter-box__buttons--number">
+                <view class="counter-box__buttons--number-action-buttons">
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="AC" data-type="ac" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">AC</button>
+                    </view>    
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="+/-" data-type="+/-" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">+/-</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="%" data-type="%" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">%</button>
+                    </view>
+                    
+                </view>
+                <view class="counter-box__buttons--number-buttons">
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="7" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">7</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="8" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">8</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="9" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">9</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="4" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">4</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="5" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">5</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="6" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">6</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="1" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">1</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="2" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">2</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="3" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">3</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="0" data-type="number" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">0</button>
+                    </view>
+                    <view class="counter-box__buttons__single-button">
+                        <button data-value="." data-type="dot" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">.</button>
+                    </view>
+                </view>
+            </view>
+            <view class="counter-box__buttons--symbol">
+                <view class="counter-box__buttons__single-button">
+                    <button data-value="÷" data-type="operator" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">÷</button>
+                </view>
+                <view class="counter-box__buttons__single-button">
+                    <button data-value="×" data-type="operator" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">×</button>
+                </view>
+                <view class="counter-box__buttons__single-button">
+                    <button data-value="-" data-type="operator" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">-</button>
+                </view>
+                <view class="counter-box__buttons__single-button">
+                    <button data-value="+" data-type="operator" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">+</button>
+                </view>
+                <view class="counter-box__buttons__single-button">
+                    <button data-value="=" data-type="equal" type="default" size="defaultSize" plain="plain"  bindtap="defaultTap" hover-class="button-active">=</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
