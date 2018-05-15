@@ -1,13 +1,13 @@
 <!--index.wxml-->
 <view class="container">
     <view class="counter-box">
-        <text class="counter-box__view">
+        <view class="counter-box__view">
                 {{showNum}}
-        </text>
+        </view>
       
-        <text class="counter-box__view">
+        <view class="counter-box__view">
                 {{ctrString}}
-        </text>
+        </view>
         
         <view class="counter-box__buttons">
             <view class="counter-box__buttons--number">
