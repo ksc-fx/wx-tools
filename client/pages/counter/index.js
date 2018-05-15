@@ -34,6 +34,9 @@ Page({
       this.initData();
       return;
     }
+    if (currentShowValue.length > 50 || currentctrString.length > 50) {
+      return;
+    }
 
     switch (type) {
       case "ac":
