@@ -4,9 +4,9 @@
         <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index">
             <view id="{{item.id}}" bindtouchstart="touchStart" bindtouchend="touchEnd" bindtouchmove="touchmove" disabled="{{!item.moveAble}}" bindchange="bindchange" class="tool-item {{ item.moveAble ? 'tool-item--move' : '' }}" direction="all" x="{{ item.x }}" y="{{ item.y }}">
                 
-                <navigator url="../{{item.page}}/index">
+                <navigator url="../{{item.page}}/index" wx:if="{{item.page}}">
                 
-                    <image class="tool-item__img" src="../../image/{{ item.image }}"></image>
+                    <text class="fa fa-calculator tool-item__img"></text>
                     <text class="tool-item__text">{{ item.name }}</text>
                 
                 </navigator>
