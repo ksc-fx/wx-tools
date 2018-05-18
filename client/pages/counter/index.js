@@ -140,6 +140,9 @@ Page({
         } else {
           resString = (currentctrString + value).replace(/\.+/g, ".");
         }
+        if (currentShowValue.indexOf(".") > -1) {
+          resString = resString.substr(0, resString.length - 1);
+        }
         this.setData({
           showNum: tapResultValue,
           ctrString: resString
